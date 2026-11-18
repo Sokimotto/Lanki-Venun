@@ -30,3 +30,7 @@ For consumable gold packs, implement purchase/fulfillment with verified Store tr
 
 ## Privacy
 The game stores gameplay gold locally in your browser. It has no analytics, ads or backend in this build. A future IAP integration may require a separate privacy policy update.
+
+
+## v3 reliability fix
+Game and shop scripts are embedded in index.html to avoid missing JS files and stale cached script references. On GitHub Pages replace all files, then unregister the old service worker if needed (DevTools > Application > Service Workers > Unregister) and clear site data. This version still needs a native Microsoft Store bridge for real checkout.
